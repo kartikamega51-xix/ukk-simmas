@@ -90,41 +90,42 @@
 </head>
 <body class="bg-white text-slate-900 antialiased selection:bg-blue-600 selection:text-white relative overflow-x-hidden">
 
-    <!-- Vibrant Blue Organic Background Shape on the Right (Matches Reference Screenshot) -->
-    <div class="pointer-events-none absolute top-0 right-0 w-[42%] xl:w-[45%] h-[820px] bg-blue-600 rounded-bl-[190px] hidden lg:block z-0 overflow-hidden">
-        <!-- Soft diagonal highlight inside the blue shape -->
-        <div class="absolute -top-24 -right-24 w-[480px] h-[480px] rounded-full bg-blue-500/25 blur-3xl"></div>
-        <div class="absolute bottom-10 left-10 w-52 h-52 rounded-full bg-blue-700/40 blur-2xl"></div>
+    <!-- Blue Background Shape on Right with Dot Pattern (Exact Match with Reference Screenshot) -->
+    <div class="pointer-events-none absolute top-0 right-0 w-[42%] xl:w-[44%] h-[740px] bg-blue-600 hidden lg:block z-0 overflow-hidden"
+         style="border-bottom-left-radius: 140px; background-image: radial-gradient(rgba(255, 255, 255, 0.22) 1.5px, transparent 1.5px); background-size: 22px 22px;">
     </div>
+
+    <!-- Bottom Left Subtle Decorative Ring (Matches Screenshot) -->
+    <div class="pointer-events-none absolute top-[480px] -left-20 w-64 h-64 rounded-full border-[18px] border-slate-100/80 -z-10 hidden sm:block"></div>
 
     <!-- Floating Pill Header -->
     <header class="fixed top-0 inset-x-0 z-50 px-4 sm:px-6 lg:px-8 pt-4">
-        <div class="mx-auto max-w-7xl rounded-full border border-slate-200/80 bg-white/95 px-6 sm:px-8 h-16 flex items-center justify-between shadow-md backdrop-blur-md">
-            <a href="{{ url('/') }}" class="flex items-center gap-3">
-                <div class="flex h-9 w-9 items-center justify-center rounded-xl bg-blue-600 text-white shadow-sm shadow-blue-600/30">
-                    <i data-lucide="graduation-cap" class="h-5 w-5"></i>
+        <div class="mx-auto max-w-6xl rounded-full border border-slate-200/70 bg-white/90 px-6 sm:px-8 h-14 flex items-center justify-between shadow-md shadow-black/5 backdrop-blur-md">
+            <a href="{{ url('/') }}" class="flex items-center gap-2.5">
+                <div class="flex h-8 w-8 items-center justify-center rounded-xl bg-blue-600 text-white shadow-xs">
+                    <i data-lucide="graduation-cap" class="h-4.5 w-4.5"></i>
                 </div>
-                <span class="text-base font-extrabold tracking-tight text-slate-900">jagang company</span>
+                <span class="text-sm sm:text-base font-extrabold tracking-tight text-slate-900">jagang company</span>
             </a>
 
-            <nav class="hidden md:flex items-center gap-8 text-sm font-semibold text-slate-600">
+            <nav class="hidden md:flex items-center gap-7 text-xs sm:text-sm font-semibold text-slate-600">
                 <a href="#features" class="hover:text-blue-600 transition-colors">Fitur</a>
                 <a href="#panduan" class="hover:text-blue-600 transition-colors">Panduan</a>
             </nav>
 
-            <div class="flex items-center gap-3">
+            <div class="flex items-center gap-2.5">
                 @auth
-                    <a href="{{ route(auth()->user()->role . '.dashboard') }}" class="rounded-full bg-blue-600 hover:bg-blue-700 text-white font-semibold text-xs sm:text-sm px-5 py-2.5 shadow-sm transition-all flex items-center gap-1.5">
+                    <a href="{{ route(auth()->user()->role . '.dashboard') }}" class="rounded-full bg-blue-600 hover:bg-blue-700 text-white font-semibold text-xs px-4 py-2 shadow-xs transition-all flex items-center gap-1.5">
                         <span>Dashboard</span>
-                        <i data-lucide="arrow-right" class="h-4 w-4"></i>
+                        <i data-lucide="arrow-right" class="h-3.5 w-3.5"></i>
                     </a>
                 @else
-                    <a href="{{ route('login') }}" class="rounded-full bg-blue-50 hover:bg-blue-100 text-blue-600 font-semibold text-xs sm:text-sm px-5 py-2 transition-colors">
+                    <a href="{{ route('login') }}" class="rounded-full bg-blue-50 hover:bg-blue-100 text-blue-600 font-semibold text-xs px-4 py-1.5 transition-colors">
                         Masuk
                     </a>
-                    <a href="{{ route('login') }}" class="rounded-full bg-blue-600 hover:bg-blue-700 text-white font-semibold text-xs sm:text-sm px-5 py-2 shadow-sm transition-all flex items-center gap-1.5">
+                    <a href="{{ route('login') }}" class="rounded-full bg-blue-600 hover:bg-blue-700 text-white font-semibold text-xs px-4 py-1.5 shadow-xs transition-all flex items-center gap-1.5">
                         <span>Mulai Sekarang</span>
-                        <i data-lucide="arrow-right" class="h-4 w-4"></i>
+                        <i data-lucide="arrow-right" class="h-3.5 w-3.5"></i>
                     </a>
                 @endauth
             </div>
@@ -132,53 +133,50 @@
     </header>
 
     <!-- Hero Section (Pixel-Perfect with Reference) -->
-    <section class="relative pt-32 pb-20 lg:pt-36 lg:pb-28">
-        <!-- Soft Circular Backdrop Glow on the Left -->
-        <div class="pointer-events-none absolute top-40 left-10 w-96 h-96 rounded-full bg-blue-100/50 blur-3xl -z-10"></div>
+    <section class="relative pt-28 pb-16 lg:pt-32 lg:pb-24">
+        <div class="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-6 items-center">
 
-        <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center">
-
-                <!-- Left Column -->
-                <div class="lg:col-span-6 space-y-6 z-10">
-                    <!-- Overline: Clean uppercase text with letter-spacing (no badge box) -->
-                    <p class="text-xs font-bold uppercase tracking-[0.16em] text-slate-400">
+                <!-- Left Column: Compact, Clean & Proportional (Not Oversized) -->
+                <div class="lg:col-span-6 space-y-5 z-10">
+                    <!-- Overline: Clean uppercase text with letter-spacing -->
+                    <p class="text-[11px] sm:text-xs font-bold uppercase tracking-[0.18em] text-slate-400">
                         SISTEM INFORMASI MANAJEMEN MAGANG SISWA
                     </p>
 
-                    <!-- Big 3-line Headline -->
-                    <h1 class="text-5xl sm:text-6xl lg:text-[72px] font-black tracking-tight text-slate-900 leading-[1.04]">
+                    <!-- Clean 3-line Headline -->
+                    <h1 class="text-4xl sm:text-5xl lg:text-[54px] font-black tracking-tight text-slate-900 leading-[1.08]">
                         Magang<br>lebih<br>teratur.
                     </h1>
 
                     <!-- Description Paragraph -->
-                    <p class="text-base text-slate-500 leading-relaxed max-w-md">
+                    <p class="text-xs sm:text-sm text-slate-500 leading-relaxed max-w-sm">
                         Platform manajemen magang siswa SMK yang menghubungkan sekolah, guru pembimbing, dan dunia usaha dalam satu sistem terpadu.
                     </p>
 
                     <!-- 3 Checklists with blue circular check icons -->
-                    <ul class="space-y-3 pt-1">
-                        <li class="flex items-center gap-3 text-sm font-semibold text-slate-700">
-                            <span class="flex h-5 w-5 shrink-0 items-center justify-center text-blue-600">
-                                <svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                    <ul class="space-y-2.5 pt-1">
+                        <li class="flex items-center gap-2.5 text-xs sm:text-sm font-medium text-slate-700">
+                            <span class="flex h-4 w-4 shrink-0 items-center justify-center text-blue-600">
+                                <svg class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
                                     <circle cx="12" cy="12" r="10"/>
                                     <path d="m9 12 2 2 4-4"/>
                                 </svg>
                             </span>
                             <span>Penempatan magang terpusat & transparan</span>
                         </li>
-                        <li class="flex items-center gap-3 text-sm font-semibold text-slate-700">
-                            <span class="flex h-5 w-5 shrink-0 items-center justify-center text-blue-600">
-                                <svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                        <li class="flex items-center gap-2.5 text-xs sm:text-sm font-medium text-slate-700">
+                            <span class="flex h-4 w-4 shrink-0 items-center justify-center text-blue-600">
+                                <svg class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
                                     <circle cx="12" cy="12" r="10"/>
                                     <path d="m9 12 2 2 4-4"/>
                                 </svg>
                             </span>
                             <span>Monitoring kehadiran & jurnal real-time</span>
                         </li>
-                        <li class="flex items-center gap-3 text-sm font-semibold text-slate-700">
-                            <span class="flex h-5 w-5 shrink-0 items-center justify-center text-blue-600">
-                                <svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                        <li class="flex items-center gap-2.5 text-xs sm:text-sm font-medium text-slate-700">
+                            <span class="flex h-4 w-4 shrink-0 items-center justify-center text-blue-600">
+                                <svg class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
                                     <circle cx="12" cy="12" r="10"/>
                                     <path d="m9 12 2 2 4-4"/>
                                 </svg>
@@ -187,193 +185,203 @@
                         </li>
                     </ul>
 
-                    <!-- Buttons -->
-                    <div class="flex flex-wrap items-center gap-4 pt-3">
-                        <a href="{{ route('login') }}" class="inline-flex items-center gap-2 rounded-xl bg-blue-600 hover:bg-blue-700 text-white px-7 py-3.5 text-sm font-bold shadow-md shadow-blue-600/25 transition-all">
+                    <!-- Action Buttons -->
+                    <div class="flex items-center gap-3 pt-2">
+                        <a href="{{ route('login') }}" class="inline-flex items-center gap-2 rounded-xl bg-blue-600 hover:bg-blue-700 text-white px-5 py-2.5 text-xs sm:text-sm font-bold shadow-md shadow-blue-600/20 transition-all">
                             <span>Mulai Sekarang</span>
                             <i data-lucide="arrow-right" class="h-4 w-4"></i>
                         </a>
-                        <a href="#features" class="inline-flex items-center justify-center rounded-xl border border-slate-200 bg-white hover:bg-slate-50 text-slate-800 px-7 py-3.5 text-sm font-bold shadow-xs transition-all">
+                        <a href="#features" class="inline-flex items-center justify-center rounded-xl border border-slate-200 bg-white hover:bg-slate-50 text-slate-800 px-5 py-2.5 text-xs sm:text-sm font-bold shadow-xs transition-all">
                             <span>Lihat Fitur</span>
                         </a>
                     </div>
                 </div>
 
-                <!-- Right Column: Interactive Dashboard Mockup + Floating LIVE Badge + PWA Install Card -->
+                <!-- Right Column: Interactive Dashboard Mockup + Floating LIVE Badge -->
                 <div class="lg:col-span-6 relative z-10 flex justify-center lg:justify-end">
 
                     <!-- Floating LIVE 324 Siswa Badge (Top Right of Mockup) -->
-                    <div class="absolute -top-4 right-4 sm:right-6 z-20 rounded-2xl bg-[#1d4ed8] text-white px-5 py-2.5 shadow-xl border border-white/20 text-center">
-                        <div class="flex items-center justify-center gap-1.5 text-[9px] font-bold text-blue-200 uppercase tracking-wider">
-                            <span class="relative flex h-2 w-2">
+                    <div class="absolute -top-3.5 right-2 sm:right-4 z-20 rounded-2xl bg-[#1d4ed8] text-white px-4 py-2 shadow-lg border border-white/20 text-center">
+                        <div class="flex items-center justify-center gap-1.5 text-[8px] font-bold text-blue-200 uppercase tracking-wider">
+                            <span class="relative flex h-1.5 w-1.5">
                                 <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
-                                <span class="relative inline-flex rounded-full h-2 w-2 bg-emerald-400"></span>
+                                <span class="relative inline-flex rounded-full h-1.5 w-1.5 bg-emerald-400"></span>
                             </span>
                             <span>LIVE</span>
                         </div>
-                        <p class="text-xs font-black text-white mt-0.5 tracking-wide">324 Siswa</p>
+                        <p class="text-[11px] font-black text-white mt-0.5 tracking-wide">324 Siswa</p>
                     </div>
 
-                    <!-- Mockup Window -->
-                    <div class="relative w-full max-w-[540px] rounded-2xl border border-slate-200 bg-white shadow-2xl overflow-hidden">
+                    <!-- Mockup Window (Clean & Perfectly Proportioned) -->
+                    <div class="relative w-full max-w-[490px] rounded-2xl border border-slate-200/90 bg-white shadow-2xl shadow-slate-900/10 overflow-hidden">
                         <!-- Window Header with 3 colored dots -->
-                        <div class="flex items-center gap-1.5 border-b border-slate-100 bg-white px-4 py-3">
-                            <span class="h-2.5 w-2.5 rounded-full bg-rose-400"></span>
-                            <span class="h-2.5 w-2.5 rounded-full bg-amber-400"></span>
-                            <span class="h-2.5 w-2.5 rounded-full bg-emerald-400"></span>
+                        <div class="flex items-center gap-1.5 border-b border-slate-100 bg-white px-4 py-2.5">
+                            <span class="h-2 w-2 rounded-full bg-rose-400"></span>
+                            <span class="h-2 w-2 rounded-full bg-amber-400"></span>
+                            <span class="h-2 w-2 rounded-full bg-emerald-400"></span>
                         </div>
 
                         <!-- Window Content: Mini Sidebar + Mini Content Area -->
-                        <div class="grid grid-cols-12 min-h-[390px] bg-white">
+                        <div class="grid grid-cols-12 min-h-[380px] bg-white text-left">
                             <!-- Mini Left Sidebar -->
-                            <div class="col-span-4 border-r border-slate-100 bg-white p-3 space-y-4">
-                                <div class="flex items-center gap-2 px-1">
-                                    <div class="flex h-6 w-6 items-center justify-center rounded-lg bg-blue-600 text-white text-[11px]">
-                                        <i data-lucide="graduation-cap" class="h-3.5 w-3.5"></i>
+                            <div class="col-span-4 border-r border-slate-100 bg-white p-3 space-y-3.5">
+                                <div class="flex items-center gap-1.5 px-1">
+                                    <div class="flex h-5 w-5 items-center justify-center rounded-md bg-blue-600 text-white text-[10px]">
+                                        <i data-lucide="graduation-cap" class="h-3 w-3"></i>
                                     </div>
-                                    <span class="font-black text-xs text-slate-800 tracking-tight">SIMMAS</span>
+                                    <span class="font-black text-[11px] text-slate-800 tracking-tight">SIMMAS</span>
                                 </div>
 
-                                <div class="space-y-1 text-[10px]">
+                                <div class="space-y-0.5 text-[9.5px]">
                                     <div class="flex items-center gap-2 rounded-lg bg-blue-50 px-2 py-1.5 font-bold text-blue-600">
-                                        <i data-lucide="layout-dashboard" class="h-3 w-3"></i>
+                                        <i data-lucide="layout-dashboard" class="h-2.5 w-2.5"></i>
                                         <span>Beranda</span>
                                     </div>
-                                    <div class="flex items-center gap-2 px-2 py-1 font-medium text-slate-500 hover:text-slate-800">
-                                        <i data-lucide="users" class="h-3 w-3"></i>
+                                    <div class="flex items-center gap-2 px-2 py-1 font-medium text-slate-500">
+                                        <i data-lucide="users" class="h-2.5 w-2.5"></i>
                                         <span>Data Siswa</span>
                                     </div>
-                                    <div class="flex items-center gap-2 px-2 py-1 font-medium text-slate-500 hover:text-slate-800">
-                                        <i data-lucide="user-check" class="h-3 w-3"></i>
+                                    <div class="flex items-center gap-2 px-2 py-1 font-medium text-slate-500">
+                                        <i data-lucide="user-check" class="h-2.5 w-2.5"></i>
                                         <span>Data Guru</span>
                                     </div>
-                                    <div class="flex items-center gap-2 px-2 py-1 font-medium text-slate-500 hover:text-slate-800">
-                                        <i data-lucide="building-2" class="h-3 w-3"></i>
+                                    <div class="flex items-center gap-2 px-2 py-1 font-medium text-slate-500">
+                                        <i data-lucide="building-2" class="h-2.5 w-2.5"></i>
                                         <span>Mitra DUDI</span>
                                     </div>
-                                    <div class="flex items-center gap-2 px-2 py-1 font-medium text-slate-500 hover:text-slate-800">
-                                        <i data-lucide="file-text" class="h-3 w-3"></i>
+                                    <div class="flex items-center gap-2 px-2 py-1 font-medium text-slate-500">
+                                        <i data-lucide="file-text" class="h-2.5 w-2.5"></i>
                                         <span>Permohonan Magang</span>
                                     </div>
-                                    <div class="flex items-center gap-2 px-2 py-1 font-medium text-slate-500 hover:text-slate-800">
-                                        <i data-lucide="briefcase" class="h-3 w-3"></i>
+                                    <div class="flex items-center gap-2 px-2 py-1 font-medium text-slate-500">
+                                        <i data-lucide="briefcase" class="h-2.5 w-2.5"></i>
                                         <span>Penempatan</span>
                                     </div>
-                                    <div class="flex items-center gap-2 px-2 py-1 font-medium text-slate-500 hover:text-slate-800">
-                                        <i data-lucide="clipboard-list" class="h-3 w-3"></i>
+                                    <div class="flex items-center gap-2 px-2 py-1 font-medium text-slate-500">
+                                        <i data-lucide="clipboard-list" class="h-2.5 w-2.5"></i>
                                         <span>Laporan</span>
                                     </div>
                                 </div>
                             </div>
 
                             <!-- Mini Right Dashboard Area -->
-                            <div class="col-span-8 p-3.5 space-y-3">
+                            <div class="col-span-8 p-3 space-y-2.5">
                                 <!-- Top Bar -->
-                                <div class="flex items-center justify-between pb-1.5 border-b border-slate-100">
-                                    <span class="text-xs font-bold text-slate-800">Dashboard</span>
-                                    <div class="flex items-center gap-1.5 text-[10px] text-slate-500">
+                                <div class="flex items-center justify-between pb-1 border-b border-slate-100">
+                                    <span class="text-[11px] font-bold text-slate-800">Dashboard</span>
+                                    <div class="flex items-center gap-1 text-[9px] text-slate-400">
+                                        <i data-lucide="user" class="h-2.5 w-2.5"></i>
                                         <span>Profile</span>
-                                        <i data-lucide="chevron-down" class="h-2.5 w-2.5 text-slate-400"></i>
+                                        <i data-lucide="chevron-down" class="h-2 w-2"></i>
                                     </div>
                                 </div>
 
                                 <!-- 3 Stat Cards in Mockup -->
-                                <div class="grid grid-cols-3 gap-2">
-                                    <div class="rounded-xl border border-slate-200/80 bg-white p-2 text-left">
-                                        <p class="text-[9px] font-semibold text-slate-400">Total Siswa</p>
-                                        <p class="text-sm font-black text-slate-900 mt-0.5">324</p>
+                                <div class="grid grid-cols-3 gap-1.5">
+                                    <div class="rounded-lg border border-slate-200/70 bg-white p-1.5 text-left">
+                                        <p class="text-[8px] font-medium text-slate-400">Total Siswa</p>
+                                        <p class="text-xs font-black text-slate-900 mt-0.5">324</p>
                                     </div>
-                                    <div class="rounded-xl border border-slate-200/80 bg-white p-2 text-left">
-                                        <p class="text-[9px] font-semibold text-slate-400">Total Guru</p>
-                                        <p class="text-sm font-black text-slate-900 mt-0.5">45</p>
+                                    <div class="rounded-lg border border-slate-200/70 bg-white p-1.5 text-left">
+                                        <p class="text-[8px] font-medium text-slate-400">Total Guru</p>
+                                        <p class="text-xs font-black text-slate-900 mt-0.5">45</p>
                                     </div>
-                                    <div class="rounded-xl border border-slate-200/80 bg-white p-2 text-left">
-                                        <p class="text-[9px] font-semibold text-slate-400">Mitra DUDI</p>
-                                        <p class="text-sm font-black text-slate-900 mt-0.5">112</p>
+                                    <div class="rounded-lg border border-slate-200/70 bg-white p-1.5 text-left">
+                                        <p class="text-[8px] font-medium text-slate-400">Mitra DUDI</p>
+                                        <p class="text-xs font-black text-slate-900 mt-0.5">112</p>
                                     </div>
                                 </div>
 
                                 <!-- Mini Table: Daftar Permohonan Magang Siswa -->
-                                <div class="space-y-1.5 pt-1">
-                                    <p class="text-[10px] font-bold text-slate-700">Daftar Permohonan Magang Siswa</p>
-                                    <div class="rounded-xl border border-slate-200/80 bg-white overflow-hidden text-[9px]">
-                                        <div class="grid grid-cols-12 bg-slate-50 font-bold text-slate-400 uppercase py-1 px-2 border-b border-slate-100 text-[8px]">
+                                <div class="space-y-1 pt-0.5">
+                                    <p class="text-[9px] font-bold text-slate-700">Daftar Permohonan Magang Siswa</p>
+                                    <div class="rounded-lg border border-slate-200/70 bg-white overflow-hidden text-[8px]">
+                                        <div class="grid grid-cols-12 bg-slate-50 font-bold text-slate-400 uppercase py-1 px-1.5 border-b border-slate-100 text-[7px]">
                                             <span class="col-span-4">Nama Siswa</span>
                                             <span class="col-span-2 text-center">Kelas</span>
                                             <span class="col-span-4">Perusahaan Mitra</span>
                                             <span class="col-span-2 text-right">Status</span>
                                         </div>
-                                        <div class="divide-y divide-slate-100">
-                                            <div class="grid grid-cols-12 py-1 px-2 items-center text-slate-700">
-                                                <span class="col-span-4 font-semibold text-slate-900 truncate">Nama Siswa</span>
-                                                <span class="col-span-2 text-center font-mono">AK1</span>
+                                        <div class="divide-y divide-slate-100 font-medium">
+                                            <!-- Row 1 -->
+                                            <div class="grid grid-cols-12 py-0.5 px-1.5 items-center text-slate-700">
+                                                <span class="col-span-4 text-slate-800 truncate">Nama Satria</span>
+                                                <span class="col-span-2 text-center text-slate-500">AK1</span>
                                                 <span class="col-span-4 text-slate-500 truncate">Perusahaan Mitra</span>
                                                 <span class="col-span-2 text-right">
-                                                    <span class="inline-block rounded bg-emerald-50 px-1 py-0.5 text-[8px] font-bold text-emerald-700">Disetujui</span>
+                                                    <span class="inline-block rounded bg-emerald-500 text-white px-1.5 py-0.2 text-[7px] font-bold">Disetujui</span>
                                                 </span>
                                             </div>
-                                            <div class="grid grid-cols-12 py-1 px-2 items-center text-slate-700">
-                                                <span class="col-span-4 font-semibold text-slate-900 truncate">Nama Dompet</span>
-                                                <span class="col-span-2 text-center font-mono">AK2</span>
+                                            <!-- Row 2 -->
+                                            <div class="grid grid-cols-12 py-0.5 px-1.5 items-center text-slate-700">
+                                                <span class="col-span-4 text-slate-800 truncate">Nama Sampel</span>
+                                                <span class="col-span-2 text-center text-slate-500">AK2</span>
                                                 <span class="col-span-4 text-slate-500 truncate">Perusahaan Mitra</span>
                                                 <span class="col-span-2 text-right">
-                                                    <span class="inline-block rounded bg-amber-50 px-1 py-0.5 text-[8px] font-bold text-amber-700">Menunggu</span>
+                                                    <span class="inline-block rounded bg-amber-400 text-white px-1.5 py-0.2 text-[7px] font-bold">Menunggu</span>
                                                 </span>
                                             </div>
-                                            <div class="grid grid-cols-12 py-1 px-2 items-center text-slate-700">
-                                                <span class="col-span-4 font-semibold text-slate-900 truncate">Aurah Fajar</span>
-                                                <span class="col-span-2 text-center font-mono">AK3</span>
+                                            <!-- Row 3 -->
+                                            <div class="grid grid-cols-12 py-0.5 px-1.5 items-center text-slate-700">
+                                                <span class="col-span-4 text-slate-800 truncate">Aurah Najmi</span>
+                                                <span class="col-span-2 text-center text-slate-500">AK3</span>
                                                 <span class="col-span-4 text-slate-500 truncate">Perusahaan Mitra</span>
                                                 <span class="col-span-2 text-right">
-                                                    <span class="inline-block rounded bg-amber-50 px-1 py-0.5 text-[8px] font-bold text-amber-700">Menunggu</span>
+                                                    <span class="inline-block rounded bg-amber-400 text-white px-1.5 py-0.2 text-[7px] font-bold">Menunggu</span>
                                                 </span>
                                             </div>
-                                            <div class="grid grid-cols-12 py-1 px-2 items-center text-slate-700">
-                                                <span class="col-span-4 font-semibold text-slate-900 truncate">Nama Sektyar</span>
-                                                <span class="col-span-2 text-center font-mono">AK4</span>
+                                            <!-- Row 4 -->
+                                            <div class="grid grid-cols-12 py-0.5 px-1.5 items-center text-slate-700">
+                                                <span class="col-span-4 text-slate-800 truncate">Nama Sektyol</span>
+                                                <span class="col-span-2 text-center text-slate-500">AK4</span>
                                                 <span class="col-span-4 text-slate-500 truncate">Perusahaan Mitra</span>
                                                 <span class="col-span-2 text-right">
-                                                    <span class="inline-block rounded bg-amber-50 px-1 py-0.5 text-[8px] font-bold text-amber-700">Menunggu</span>
+                                                    <span class="inline-block rounded bg-amber-400 text-white px-1.5 py-0.2 text-[7px] font-bold">Menunggu</span>
                                                 </span>
                                             </div>
-                                            <div class="grid grid-cols-12 py-1 px-2 items-center text-slate-700">
-                                                <span class="col-span-4 font-semibold text-slate-900 truncate">Ryan Giro</span>
-                                                <span class="col-span-2 text-center font-mono">AK1</span>
+                                            <!-- Row 5 -->
+                                            <div class="grid grid-cols-12 py-0.5 px-1.5 items-center text-slate-700">
+                                                <span class="col-span-4 text-slate-800 truncate">Kyan Giku</span>
+                                                <span class="col-span-2 text-center text-slate-500">AK1</span>
                                                 <span class="col-span-4 text-slate-500 truncate">Kakar Mitra</span>
                                                 <span class="col-span-2 text-right">
-                                                    <span class="inline-block rounded bg-emerald-50 px-1 py-0.5 text-[8px] font-bold text-emerald-700">Disetujui</span>
+                                                    <span class="inline-block rounded bg-emerald-500 text-white px-1.5 py-0.2 text-[7px] font-bold">Disetujui</span>
                                                 </span>
                                             </div>
-                                            <div class="grid grid-cols-12 py-1 px-2 items-center text-slate-700">
-                                                <span class="col-span-4 font-semibold text-slate-900 truncate">Moch Aurelio</span>
-                                                <span class="col-span-2 text-center font-mono">AK4</span>
+                                            <!-- Row 6 -->
+                                            <div class="grid grid-cols-12 py-0.5 px-1.5 items-center text-slate-700">
+                                                <span class="col-span-4 text-slate-800 truncate">Malik Aurelio</span>
+                                                <span class="col-span-2 text-center text-slate-500">AK4</span>
                                                 <span class="col-span-4 text-slate-500 truncate">Perusahaan Mitra</span>
                                                 <span class="col-span-2 text-right">
-                                                    <span class="inline-block rounded bg-emerald-50 px-1 py-0.5 text-[8px] font-bold text-emerald-700">Disetujui</span>
+                                                    <span class="inline-block rounded bg-emerald-500 text-white px-1.5 py-0.2 text-[7px] font-bold">Disetujui</span>
                                                 </span>
                                             </div>
-                                            <div class="grid grid-cols-12 py-1 px-2 items-center text-slate-700">
-                                                <span class="col-span-4 font-semibold text-slate-900 truncate">Nadia Hinggarani</span>
-                                                <span class="col-span-2 text-center font-mono">AK2</span>
+                                            <!-- Row 7 -->
+                                            <div class="grid grid-cols-12 py-0.5 px-1.5 items-center text-slate-700">
+                                                <span class="col-span-4 text-slate-800 truncate">Nadia Hinggari</span>
+                                                <span class="col-span-2 text-center text-slate-500">AK2</span>
                                                 <span class="col-span-4 text-slate-500 truncate">Perusahaan Mitra</span>
                                                 <span class="col-span-2 text-right">
-                                                    <span class="inline-block rounded bg-emerald-50 px-1 py-0.5 text-[8px] font-bold text-emerald-700">Disetujui</span>
+                                                    <span class="inline-block rounded bg-amber-400 text-white px-1.5 py-0.2 text-[7px] font-bold">Menunggu</span>
                                                 </span>
                                             </div>
-                                            <div class="grid grid-cols-12 py-1 px-2 items-center text-slate-700">
-                                                <span class="col-span-4 font-semibold text-slate-900 truncate">Nurul Bustia</span>
-                                                <span class="col-span-2 text-center font-mono">AK3</span>
+                                            <!-- Row 8 -->
+                                            <div class="grid grid-cols-12 py-0.5 px-1.5 items-center text-slate-700">
+                                                <span class="col-span-4 text-slate-800 truncate">Nurul Susita</span>
+                                                <span class="col-span-2 text-center text-slate-500">AK3</span>
                                                 <span class="col-span-4 text-slate-500 truncate">Perusahaan Mitra</span>
                                                 <span class="col-span-2 text-right">
-                                                    <span class="inline-block rounded bg-amber-50 px-1 py-0.5 text-[8px] font-bold text-amber-700">Menunggu</span>
+                                                    <span class="inline-block rounded bg-amber-400 text-white px-1.5 py-0.2 text-[7px] font-bold">Menunggu</span>
                                                 </span>
                                             </div>
-                                            <div class="grid grid-cols-12 py-1 px-2 items-center text-slate-700">
-                                                <span class="col-span-4 font-semibold text-slate-900 truncate">Nana Devaya</span>
-                                                <span class="col-span-2 text-center font-mono">AK1</span>
+                                            <!-- Row 9 -->
+                                            <div class="grid grid-cols-12 py-0.5 px-1.5 items-center text-slate-700">
+                                                <span class="col-span-4 text-slate-800 truncate">Nama Derajat</span>
+                                                <span class="col-span-2 text-center text-slate-500">AK1</span>
                                                 <span class="col-span-4 text-slate-500 truncate">Perusahaan Mitra</span>
                                                 <span class="col-span-2 text-right">
-                                                    <span class="inline-block rounded bg-amber-50 px-1 py-0.5 text-[8px] font-bold text-amber-700">Menunggu</span>
+                                                    <span class="inline-block rounded bg-emerald-500 text-white px-1.5 py-0.2 text-[7px] font-bold">Disetujui</span>
                                                 </span>
                                             </div>
                                         </div>
@@ -382,41 +390,6 @@
                             </div>
                         </div>
                     </div>
-
-                    <!-- Floating "Instal Aplikasi SIMMAS" Card (Matches Screenshot Bottom Right) -->
-                    <div x-data="{ showPrompt: true }" x-show="showPrompt" x-cloak class="absolute -bottom-8 -right-2 sm:-right-6 z-30 w-80 sm:w-88 rounded-2xl bg-white shadow-2xl border border-slate-200/90 p-4 transition-all duration-300">
-                        <button type="button" @click="showPrompt = false" class="absolute top-2.5 right-2.5 text-slate-400 hover:text-slate-600 p-1 cursor-pointer">
-                            <i data-lucide="x" class="h-3.5 w-3.5"></i>
-                        </button>
-
-                        <div class="flex items-start gap-3">
-                            <div class="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-blue-600 text-white shadow-sm shadow-blue-600/30">
-                                <i data-lucide="graduation-cap" class="h-6 w-6"></i>
-                            </div>
-                            <div class="min-w-0 pr-4">
-                                <h4 class="text-xs font-bold text-slate-900">Instal Aplikasi SIMMAS</h4>
-                                <p class="text-[11px] text-slate-500 leading-snug mt-0.5">
-                                    Pasang di Desktop Anda untuk akses instan, pengalaman layar penuh, dan performa lebih lancar.
-                                </p>
-                            </div>
-                        </div>
-
-                        <div class="mt-3.5 flex items-center justify-end gap-2">
-                            <button type="button" @click="alert('PWA Installer: Aplikasi SIMMAS siap dipasang.')" class="rounded-lg bg-blue-600 hover:bg-blue-700 px-3.5 py-1.5 text-[11px] font-bold text-white transition-colors flex items-center gap-1.5 shadow-xs cursor-pointer">
-                                <i data-lucide="download" class="h-3 w-3"></i>
-                                <span>Instal Sekarang</span>
-                            </button>
-                            <button type="button" @click="showPrompt = false" class="rounded-lg border border-transparent hover:bg-slate-100 px-3 py-1.5 text-[11px] font-semibold text-slate-500 transition-colors cursor-pointer">
-                                Nanti Saja
-                            </button>
-                        </div>
-                    </div>
-
-                </div>
-
-            </div>
-        </div>
-    </section>
 
                 </div>
 
