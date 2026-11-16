@@ -69,7 +69,7 @@ class AdminController extends Controller
 
         // Daftar Permohonan Magang Siswa (Tabel Mockup Referensi)
         $daftarPermohonan = PengajuanMagang::with(['siswa.profile', 'tempatMagang'])
-            ->orderByDesc('created_at')
+            ->orderByDesc('tanggal_pengajuan')
             ->limit(10)
             ->get();
 

@@ -125,7 +125,7 @@
                                                 id: '{{ $pengajuan->id }}',
                                                 siswa_nama: '{{ addslashes($pengajuan->siswa?->profile?->nama ?? '') }}',
                                                 dudi_nama: '{{ addslashes($pengajuan->tempatMagang?->nama_perusahaan ?? '') }}',
-                                                posisi: '{{ addslashes($pengajuan->posisi_tujuan ?? '') }}',
+                                                posisi: '{{ addslashes($pengajuan->posisi ?? '') }}',
                                                 status: 'disetujui',
                                                 guru_id: '',
                                                 catatan_penolakan: ''
@@ -290,8 +290,8 @@
             const ctx = document.getElementById('trenPengajuanChart');
             if (!ctx) return;
 
-            const months = @json($months ?? ['Jun', 'Jul', 'Agu', 'Sep', 'Okt', 'Nov']);
-            const counts = @json($counts ?? [0, 0, 0, 0, 0, 0]);
+            const months = {!! json_encode($months ?? ['Jun', 'Jul', 'Agu', 'Sep', 'Okt', 'Nov']) !!};
+            const counts = {!! json_encode($counts ?? [0, 0, 0, 0, 0, 0]) !!};
 
             new Chart(ctx, {
                 type: 'line',
